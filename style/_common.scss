@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color_black;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+body{
+    @include flex();
+    justify-content: center;
+    background-color: $color_tomato;
+    height: 100vh;
+}
+
+.wrap {
+    width: 400px;
+    height: 800px;
+    padding: 30px 20px;
+    border-radius: $border_radius_small;
+    background-color: $color_gray;
+}
+
+.main_menu {
+    @include flex();
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    border-radius: $border_radius_small;
+    background-color: $color_white;
+
+    & > a {
+        @include flex();
+        justify-content: space-between;
+        width: 100%;
+
+        & > button {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: $color_darkblack;
+    
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 2px;
+                height: 10px;
+                background-color: $color_white;
+            }
+    
+            &::before {
+                left: 9px;
+                transform: translateY(-50%) rotate(325deg);
+            }
+    
+            &::after {
+                right: 9px;
+                transform: translateY(-50%) rotate(35deg);
+            }
+        }
+
+        & > .sub_menu_wrap {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            padding: 0 10px;
+            background-color: $color_white;
+        }
+    }
+}
+
+.sub_menu {
+    @include flex();
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border-bottom: $border_color_gray;
+
+    & > span {
+        padding: 5px 16px;
+        color: $color_white;
+        border-radius: $border_radius_small;
+        background-color: $color_green;
+    }
+
+}
+

@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6483b;
+  height: 100vh;
+}
+
+.wrap {
+  width: 400px;
+  height: 800px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #f6f6f7;
+}
+
+.main_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.main_menu > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.main_menu > a > button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #635152;
+}
+.main_menu > a > button::before, .main_menu > a > button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+}
+.main_menu > a > button::before {
+  left: 9px;
+  transform: translateY(-50%) rotate(325deg);
+}
+.main_menu > a > button::after {
+  right: 9px;
+  transform: translateY(-50%) rotate(35deg);
+}
+.main_menu > a > .sub_menu_wrap {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.sub_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #f6f6f7;
+}
+.sub_menu > span {
+  padding: 5px 16px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #39ca9b;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.active_btn {
+  background-color: #f6483b;
+}
+.active_btn::before {
+  left: 9px;
+  transform: translateY(-50%) rotate(215deg);
+}
+.active_btn::after {
+  right: 9px;
+  transform: translateY(-50%) rotate(145deg);
+}
+
+.active {
+  display: block;
+}
