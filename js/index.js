@@ -1,14 +1,17 @@
 const mainMenuList = document.querySelectorAll('a');
+const btn = document.getElementsByTagName('button');
 const subMenuWrap = document.querySelector('.sub_menu_wrap');
 
-console.log(mainMenu);
+console.log(mainMenuList);
 console.log(subMenuWrap);
+console.log(btn);
 
 const clickHandler = (e) => {
+    console.dir(e);
     e.preventDefault();
-    e.target.classList.add('active_btn');
-    subMenuWrap.classList.add('active');
+    btn.classList.add('active_btn');
+    subMenuWrap.classList.toggle('active');
 }
 
 
-mainMenuList.forEach((mainmenu) => mainmenu.addEventListener('click', clickHandler));
+mainMenuList.forEach((item) => item.addEventListener('click', clickHandler));
