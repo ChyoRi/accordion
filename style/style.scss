@@ -9,6 +9,10 @@ h2 {
     margin-bottom: 15px;
 }
 
+.sub_menu_wrap > ul > li:last-of-type {
+    border-bottom: none;
+}
+
 .active_btn {
     background-color: $color_tomato;
 

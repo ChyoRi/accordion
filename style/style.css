@@ -73,7 +73,7 @@ body {
 }
 
 .sub_menu_wrap {
-  display: block;
+  display: none;
   margin-top: 10px;
   padding: 0 10px;
   background-color: #fff;
@@ -99,6 +99,10 @@ body {
 h2 {
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.sub_menu_wrap > ul > li:last-of-type {
+  border-bottom: none;
 }
 
 .active_btn {
