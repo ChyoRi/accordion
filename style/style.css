@@ -47,6 +47,7 @@ body {
   padding: 0 10px;
   border-radius: 10px;
   background-color: #fff;
+  transition: all 1s;
 }
 .main_menu > .main_contents > button {
   position: relative;

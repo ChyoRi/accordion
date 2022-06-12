@@ -1,16 +1,20 @@
-const mainMenu = document.querySelectorAll('.main_menu');
-const btn = document.getElementsByTagName('button');
-const subMenuWrap = document.querySelector('.sub_menu_wrap');
+const mainMenu = document.querySelectorAll('.main_contents');
+// const subMenuWrap = document.querySelector('.sub_menu_wrap');
 
 console.log(mainMenu);
-console.log(btn);
-console.log(subMenuWrap);
 
-const clickHandler = (e) => {
-    console.dir(e);
-    // btn.classList.add('active_btn');
+
+function clickHandler(e) {
+    const btn = this.children[0];
+    const subMenuWrap = this.nextElementSibling;
+    console.log(btn);
+    console.log(e);
+    console.log(subMenuWrap);
+    btn.classList.toggle('active_btn');
     subMenuWrap.classList.toggle('active');
 }
 
 
-mainMenu.forEach((item) => item.addEventListener('click', clickHandler));
+mainMenu.forEach((item) => {
+    item.addEventListener('click', clickHandler);
+});

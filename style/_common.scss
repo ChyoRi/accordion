@@ -50,6 +50,7 @@ body{
         padding: 0 10px;
         border-radius: $border_radius_small;
         background-color: $color_white;
+        transition: all 1s;
 
         & > button {
             position: relative;
