@@ -24,15 +24,28 @@ a {
 body{
     @include flex();
     justify-content: center;
+    align-items: flex-start;
     background-color: $color_tomato;
     height: 100vh;
 }
 
 .wrap {
     width: 300px;
+    height: 430px;
+    overflow: auto;
     padding: 30px 20px;
     border-radius: $border_radius_small;
     background-color: $color_gray;
+    position: sticky;
+    top: calc(50% - 430px / 2);
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: #eee;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
 }
 
 .main_menu {
@@ -57,6 +70,7 @@ body{
             height: 20px;
             border-radius: 50%;
             background-color: $color_darkblack;
+            transition: .3s;
     
             &::before, &::after {
                 content: '';
@@ -89,7 +103,10 @@ body{
     border-radius: $border_radius_small;
     font-size: 13px;
     overflow: hidden;
-    transition: all 1s;
+    transition: max-height .3s linear;
+    &.active {
+        // max-height: 100vh;
+    }
 }
 
 .sub_menu {
