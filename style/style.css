@@ -47,7 +47,6 @@ body {
   padding: 0 10px;
   border-radius: 10px;
   background-color: #fff;
-  transition: all 1s;
 }
 .main_menu > .main_contents > button {
   position: relative;
@@ -74,12 +73,14 @@ body {
 }
 
 .sub_menu_wrap {
-  display: none;
+  max-height: 0;
   margin-top: 10px;
   padding: 0 10px;
   background-color: #fff;
   border-radius: 10px;
   font-size: 13px;
+  overflow: hidden;
+  transition: all 1s;
 }
 
 .sub_menu {
@@ -119,5 +120,5 @@ h2 {
 }
 
 .active {
-  display: block;
+  max-height: 100vh;
 }

@@ -50,7 +50,6 @@ body{
         padding: 0 10px;
         border-radius: $border_radius_small;
         background-color: $color_white;
-        transition: all 1s;
 
         & > button {
             position: relative;
@@ -83,12 +82,14 @@ body{
 }
 
 .sub_menu_wrap {
-    display: none;
+    max-height: 0;
     margin-top: 10px;
     padding: 0 10px;
     background-color: $color_white;
     border-radius: $border_radius_small;
     font-size: 13px;
+    overflow: hidden;
+    transition: all 1s;
 }
 
 .sub_menu {
